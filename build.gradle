@@ -93,7 +93,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    flavorDimensions("distribution")
+    flavorDimensions("distribution", "emoji")
 
     productFlavors {
         playstore {
@@ -101,6 +101,13 @@ android {
         }
         free {
             dimension "distribution"
+        }
+        compat {
+            dimension "emoji"
+        }
+        system {
+            // Use system emoji instead of compat
+            dimension "emoji"
         }
     }
 
